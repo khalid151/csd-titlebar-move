@@ -22,6 +22,12 @@ void hkCXDGToplevelResConstructor(CXDGToplevelResource* thisptr, SP<CXdgToplevel
             g_pKeybindManager->m_dispatchers["mouse"]("1movewindow");
         }
     });
+
+    resource->setSetMinimized([thisptr](CXdgToplevel* t) {
+        if (auto dispatcher = g_pKeybindManager->m_dispatchers["plugin:minimize:minimize"]) {
+            dispatcher("");
+        }
+    });
 }
 
 // Do NOT change this function.
