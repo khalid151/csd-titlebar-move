@@ -8,4 +8,4 @@ inline HANDLE PHANDLE = nullptr;
 inline CFunctionHook* g_pCXDGToplevelResConstructor = nullptr;
 
 typedef void (*origCXDGToplevelResConstructor)(CXDGToplevelResource*, SP<CXdgToplevel>, SP<CXDGSurfaceResource>);
-SP<HOOK_CALLBACK_FN> g_pMouseBtnCallback = nullptr;
+CHyprSignalListener g_pMouseBtnCallback = nullptr;
